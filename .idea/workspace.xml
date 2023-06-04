@@ -20,10 +20,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b504bfa-0d75-4819-874f-d004ce242b1b" name="Changes" comment="Layout Example">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2b504bfa-0d75-4819-874f-d004ce242b1b" name="Changes" comment="Splitters Example">
       <change beforePath="$PROJECT_DIR$/src/App.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +123,7 @@
       <workItem from="1685903140989" duration="759000" />
       <workItem from="1685903919502" duration="28000" />
       <workItem from="1685903954982" duration="2271000" />
-      <workItem from="1685906264807" duration="4785000" />
+      <workItem from="1685906264807" duration="4851000" />
     </task>
     <task id="LOCAL-00001" summary="Sizers example">
       <created>1685909670067</created>
@@ -141,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685909695314</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Splitters Example">
+      <created>1685911171112</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685911171112</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +173,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Sizers example" />
     <MESSAGE value="Layout Example" />
-    <option name="LAST_COMMIT_MESSAGE" value="Layout Example" />
+    <MESSAGE value="Splitters Example" />
+    <option name="LAST_COMMIT_MESSAGE" value="Splitters Example" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

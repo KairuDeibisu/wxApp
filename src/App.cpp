@@ -14,8 +14,6 @@ namespace Program {
 
         #ifdef __NT__
             SetProcessDPIAware();
-        #else
-            App::SetUseBestVisual(true);
         #endif
 
         const auto defaultSizeWithoutDPI = wxDefaultSize;
