@@ -1,32 +1,34 @@
 cmake_minimum_required(VERSION 3.6 FATAL_ERROR)
 
-project(wx_cmake_template LANGUAGES CXX)
+project(wx_cmake_template_core LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# ExternalProject base
-set_property(DIRECTORY PROPERTY EP_BASE ${CMAKE_BINARY_DIR}/subprojects)
+# hack for buggy CMake's FindwxWidgets script
+if(DEFINED ENV_WX_CONFIG)
+    set(ENV{WX_CONFIG} ${ENV_WX_CONFIG})
+endif()
 
-set(STAGED_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/stage)
+set(wxWidgets_USE_STATIC 1)
 
-add_subdirectory(thirdparty)
+find_package(wxWidgets REQUIRED)
 
-include(ExternalProject)
-ExternalProject_Add(${PROJECT_NAME}_core
-  DEPENDS
-  wxWidgets_external
-  SOURCE_DIR
-  ${CMAKE_CURRENT_SOURCE_DIR}/src
-  CMAKE_ARGS
-  -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+set(SRCS src/App.h src/App.cpp src/App.h src/MainFrame.cpp src/MainFrame.h)
 
-  -DwxWidgets_ROOT_DIR=${wxWidgets_ROOT_DIR}
-  -DENV_WX_CONFIG=${ENV_WX_CONFIG}
-  CMAKE_CACHE_ARGS
-  -DCMAKE_PREFIX_PATH:PATH=${CMAKE_PREFIX_PATH}
-  BUILD_ALWAYS
-  1
-  INSTALL_COMMAND
-  ""
-)
+include(${wxWidgets_USE_FILE})
+
+if(APPLE)
+    # create bundle on apple compiles
+    add_executable(main MACOSX_BUNDLE ${SRCS})
+
+    # Set a custom plist file for the app bundle - needed for Mac OS Retina display
+    set_target_properties(main PROPERTIES MACOSX_BUNDLE_INFO_PLIST src/Info.plist)
+else()
+    # the WIN32 is needed for Windows in order for it to look for WinMain
+    # instead of the main function. This is ignored on other systems,
+    # so it works on all platforms
+    add_executable(main WIN32 ${SRCS} src/main.exe.manifest)
+endif()
+
+target_link_libraries(main PRIVATE ${wxWidgets_LIBRARIES})
