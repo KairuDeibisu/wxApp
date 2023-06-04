@@ -3,33 +3,35 @@
 //
 
 #include "MainFrame.h"
-#include <wx/gdicmn.h>
-#include <wx/sizer.h>
+#include <wx/splitter.h>
 
 namespace Program {
     MainFrame::MainFrame(const wxString &title, const wxPoint &pos, const wxSize &size)
             : wxFrame(nullptr, wxID_ANY, title, pos, size)
     {
-        auto *pTop = new wxPanel(this, wxID_ANY, wxDefaultPosition, wxSize(200, 100));
-        pTop->SetBackgroundColour(wxColour(100, 100, 200));
+        auto *splitter = new wxSplitterWindow(this, wxID_ANY, wxDefaultPosition, wxDefaultSize,
+                                              wxSP_BORDER | wxSP_LIVE_UPDATE);
 
-        auto *pBottom = new wxPanel(this, wxID_ANY, wxDefaultPosition, wxSize(200, 100));
-        pBottom->SetBackgroundColour(wxColour(100, 200, 100));
+        auto *rightSplitter = new wxSplitterWindow(splitter, wxID_ANY, wxDefaultPosition, wxDefaultSize,
+                                                   wxSP_BORDER | wxSP_LIVE_UPDATE);
 
-        auto *pBottomRight = new wxPanel(pBottom, wxID_ANY, wxDefaultPosition, wxSize(100, 100));
-        pBottomRight->SetBackgroundColour(wxColour(200, 200, 100));
+        auto *left = new wxPanel(splitter, wxID_ANY);
+        auto *right = new wxPanel(rightSplitter, wxID_ANY);
+        auto *bottom = new wxPanel(rightSplitter, wxID_ANY);
 
-        auto *vBoxTop = new wxBoxSizer(wxVERTICAL);
-        vBoxTop->Add(pTop, 1, wxEXPAND);
-        vBoxTop->Add(pBottom, 1, wxEXPAND);
+        left->SetBackgroundColour(wxColour(200, 100, 100));
+        right->SetBackgroundColour(wxColour(100, 200, 100));
+        bottom->SetBackgroundColour(wxColour(200, 200, 100));
 
-        auto *hBoxBottom = new wxBoxSizer(wxVERTICAL);
-        hBoxBottom->Add(pBottomRight, 1, wxALIGN_RIGHT);
+        rightSplitter->SetMinimumPaneSize(100);
+        rightSplitter->SplitHorizontally(right, bottom);
 
-        pBottom->SetSizer(hBoxBottom);
+        splitter->SetMinimumPaneSize(200);
+
+        splitter->SplitVertically(left, rightSplitter);
 
 
-        this->SetSizerAndFit(vBoxTop);
+
     }
 }
 
