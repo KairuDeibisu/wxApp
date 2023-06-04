@@ -20,16 +20,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b504bfa-0d75-4819-874f-d004ce242b1b" name="Changes" comment="Splitters Example">
+    <list default="true" id="2b504bfa-0d75-4819-874f-d004ce242b1b" name="Changes" comment="Updated App">
+      <change afterPath="$PROJECT_DIR$/CLionCodeStyleSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ClangdSettings">
-    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
@@ -63,6 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.overridden": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
@@ -73,7 +76,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C/C++",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -123,7 +126,7 @@
       <workItem from="1685903140989" duration="759000" />
       <workItem from="1685903919502" duration="28000" />
       <workItem from="1685903954982" duration="2271000" />
-      <workItem from="1685906264807" duration="4851000" />
+      <workItem from="1685906264807" duration="5163000" />
     </task>
     <task id="LOCAL-00001" summary="Sizers example">
       <created>1685909670067</created>
@@ -146,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685911171112</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated App">
+      <created>1685911223615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685911223615</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +184,8 @@
     <MESSAGE value="Sizers example" />
     <MESSAGE value="Layout Example" />
     <MESSAGE value="Splitters Example" />
-    <option name="LAST_COMMIT_MESSAGE" value="Splitters Example" />
+    <MESSAGE value="Updated App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated App" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

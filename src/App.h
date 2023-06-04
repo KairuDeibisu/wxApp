@@ -4,11 +4,9 @@
 
 namespace Program {
 
-    class App: public wxApp
-    {
-    public:
-        virtual bool OnInit();
-    };
+class App : public wxApp {
+public:
+  virtual bool OnInit();
+};
 
-}
-
+} // namespace Program

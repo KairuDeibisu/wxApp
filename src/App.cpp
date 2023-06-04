@@ -2,26 +2,24 @@
 #include "MainFrame.h"
 #include <wx/wx.h>
 
-
-
 #ifdef __NT__
-    #include <windows.h>
+#include <windows.h>
 #endif
 
 namespace Program {
 
-    bool App::OnInit() {
+bool App::OnInit() {
 
-        #ifdef __NT__
-            SetProcessDPIAware();
-        #endif
+#ifdef __NT__
+  SetProcessDPIAware();
+#endif
 
-        const auto defaultSizeWithoutDPI = wxDefaultSize;
-        auto *frame = new MainFrame("Hello World", wxDefaultPosition, wxDefaultSize);
+  const auto defaultSizeWithoutDPI = wxDefaultSize;
+  auto *frame = new MainFrame("Hello World", wxDefaultPosition, wxDefaultSize);
 
-        frame->Show(true);
-        return true;
-    }
+  frame->Show(true);
+  return true;
 }
+} // namespace Program
 
 wxIMPLEMENT_APP(Program::App);
